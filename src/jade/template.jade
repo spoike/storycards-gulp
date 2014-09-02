@@ -9,9 +9,9 @@ html(lang="en")
         link(rel="stylesheet" href="./main.css")
     body
         main.cards
-            each cardRow, index in cardRows(4)
-                .card-row
-                    each card in cardRow
+            each cardPage, index in cardPages(4)
+                .card-page
+                    each card in cardPage
                         section.card
                             header.icons
                                 if card.IsBug
@@ -32,5 +32,5 @@ html(lang="en")
                             article.box.small
                                 dt Priority
                                 dd!= card.Priority
-                if index < cardRows.length
+                if index < cardPages.length
                     div.page-break
