@@ -17,8 +17,11 @@ gulp.task('load-cards', function() {
 });
 
 gulp.task('to-html', function() {
-    return toHtml('./src/jade/template.jade', loadedCards)
-        .pipe(gulp.dest('build/'));
+    return gulp.src('./src/jade/template.jade')
+        .pipe(watch(function() {
+            return toHtml('./src/jade/template.jade', loadedCards)
+                .pipe(gulp.dest('build/'));
+        }));
 });
 
 gulp.task('sass', function() {
@@ -35,6 +38,7 @@ gulp.task('build', function() {
         .pipe(watch(function(files) {
             return runSequence('load-cards', 'to-html');
         }));
+    gulp.src('.')
 });
 
 gulp.task('default', ['sass', 'build'], function() {
