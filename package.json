@@ -1,9 +1,15 @@
 {
   "name": "storycards-gulp",
-  "version": "0.0.0",
-  "description": "Storycard Generator w. Gulp",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "NodeJS/Gulp based project for generating story cards with Yaml/Markdown using Jade templates",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spoike/storycards-gulp"
+  },
+  "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mikael Brassman",
