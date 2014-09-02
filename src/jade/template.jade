@@ -8,7 +8,10 @@ html(lang="en")
         link(rel="stylesheet" href="./main.css")
     body
         main.cards
-            each card in cards
-                section.card
-                    h1= card.Heading
-                    article.description!= card.description
+            each cardRow in cardRows(4)
+                .card-row
+                    each card in cardRow
+                        section.card
+                            h1= card.Heading
+                            article.description!= card.description
+                div.page-break

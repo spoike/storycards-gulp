@@ -19,11 +19,15 @@ p {
     size: landscape;
 }
 
-.cards {
+.card-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.page-break {
+    page-break-after: always;
 }
 
 .card {
