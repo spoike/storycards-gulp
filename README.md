@@ -29,6 +29,8 @@ The HTML is generated from a Jade template at `src/jade/template.jade`.
 
 The CSS is generated from a SASS file at `src/sass/main.scss`.
 
+The output is generated to the `build` directory.
+
 # License
 
 MIT (c) Mikael Brassman 2014
