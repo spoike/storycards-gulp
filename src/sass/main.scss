@@ -6,23 +6,41 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 @page {
     margin: 1cm;
+    size: landscape;
 }
 
 .card {
     page-break-inside: avoid;
-    width: 10cm;
+    width: 50%;
     height: 7cm;
-    margin: 0.5cm;
+    margin: 0;
     padding: 0.5cm;
     border: black solid thin;
+    float: left;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 12pt;
+        margin: 0 0 0.3em 0;
+    }
+
+    p {
+        font-size: 10pt;
+        margin: 0 0 0.3em 0;
+    }
+
+    .description {
+        border: black solid thin;
+        padding: 0.25cm;
+    }
 }
