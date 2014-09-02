@@ -23,6 +23,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .page-break {
@@ -37,7 +38,7 @@ p {
     border: black solid thin;
     box-sizing: border-box;
     position: relative;
-    flex-basis: 11.5cm;
+    flex-basis: 12.5cm;
 
     display: flex;
     flex-direction: row;
