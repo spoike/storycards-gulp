@@ -69,7 +69,7 @@ p {
     .box {
         display: flex;
         flex-direction: column;
-        flex-wrap: no-wrap;
+        flex-wrap: nowrap;
         flex: 1 1.5cm;
 
         &.description {
