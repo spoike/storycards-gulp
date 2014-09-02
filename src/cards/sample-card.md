@@ -12,3 +12,5 @@ Priority: 1
 **Then** It should generate the card in an html file
 
 ## Acceptance Criteria
+
+There should be cards available at `build/cards.html`.
