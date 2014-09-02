@@ -23,19 +23,20 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card {
     page-break-inside: avoid;
-    width: 14cm;
     height: 8cm;
-    margin: 0.5cm;
+    margin: 0 0 0.5cm 0;
     padding: 0.5cm;
     border: black solid thin;
     box-sizing: border-box;
+    flex-basis: 11.5cm;
 
     h1 {
-        font-size: 12pt;
+        font-size: 14pt;
         margin: 0 0 0.3em 0;
     }
 
