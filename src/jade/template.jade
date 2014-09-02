@@ -23,7 +23,14 @@ html(lang="en")
                                 if card.IsHighPriority
                                     i.fa.fa-exclamation.fa-2x
                             h1= card.Heading
-                            article.description!= card.description
-                            p
+                            article.box.description
+                                dt Description
+                                dd!= card.description
+                            article.box.small
+                                dt Estimate
+                                dd!= card.Estimated
+                            article.box.small
+                                dt Priority
+                                dd!= card.Priority
                 if index < cardRows.length
                     div.page-break
