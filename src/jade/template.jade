@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+    head= pageTitle
+    body
+        h1 Story cards
+        each card in cards
+            section.card
+                h1= card.Heading
+                article!= card.description
