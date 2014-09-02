@@ -34,11 +34,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('build', function() {
-    gulp.src('./src/cards/*.md')
+    return gulp.src('./src/cards/*.md')
         .pipe(watch(function(files) {
-            return runSequence('load-cards', 'to-html');
+            runSequence('load-cards', 'to-html');
+            return files;
         }));
-    gulp.src('.')
 });
 
 gulp.task('default', ['sass', 'build'], function() {

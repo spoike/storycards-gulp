@@ -38,6 +38,7 @@ p {
     border: black solid thin;
     box-sizing: border-box;
     flex-basis: 11.5cm;
+    position: relative;
 
     h1 {
         font-size: 14pt;
@@ -47,6 +48,12 @@ p {
     p {
         font-size: 10pt;
         margin: 0 0 0.3em 0;
+    }
+
+    .icons {
+        position: absolute;
+        top: 0.25cm;
+        right: 0.25cm;
     }
 
     .description {

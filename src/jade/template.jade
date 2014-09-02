@@ -5,13 +5,25 @@ html(lang="en")
         meta(charset="utf-8")
         meta(name="description" content="Generated story cards")
         title Generated Story Cards
+        link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
         link(rel="stylesheet" href="./main.css")
     body
         main.cards
-            each cardRow in cardRows(4)
+            each cardRow, index in cardRows(4)
                 .card-row
                     each card in cardRow
                         section.card
+                            header.icons
+                                if card.IsBug
+                                    i.fa.fa-bug.fa-2x
+                                if card.IsSpike
+                                    i.fa.fa-flask.fa-2x
+                                if card.IsTask
+                                    i.fa.fa-cog.fa-2x
+                                if card.IsHighPriority
+                                    i.fa.fa-exclamation.fa-2x
                             h1= card.Heading
                             article.description!= card.description
-                div.page-break
+                            p
+                if index < cardRows.length
+                    div.page-break
