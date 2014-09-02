@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+@page {
+    margin: 1cm;
+}
+
+.card {
+    page-break-inside: avoid;
+    width: 10cm;
+    height: 7cm;
+    margin: 0.5cm;
+    padding: 0.5cm;
+    border: black solid thin;
+}

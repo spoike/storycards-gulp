@@ -1,8 +1,9 @@
 doctype html
 html(lang="en")
-    head= pageTitle
+    head
+        title Generated Story Cards
+        link(rel="stylesheet" href="./main.css")
     body
-        h1 Story cards
         each card in cards
             section.card
                 h1= card.Heading

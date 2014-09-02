@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     tap = require('gulp-tap'),
+    sass = require('gulp-sass'),
     asCard = require('./lib/as-card'),
     toHtml = require('./lib/to-html');
 
@@ -18,6 +19,15 @@ gulp.task('to-html', function() {
         .pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', function() {
+gulp.task('sass', function() {
+    return gulp.src('./src/sass/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('build', function() {
     runSequence('load-cards', 'to-html');
+});
+
+gulp.task('default', ['sass', 'build'], function() {
 });
