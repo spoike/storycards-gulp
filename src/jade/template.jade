@@ -22,7 +22,11 @@ html(lang="en")
                                     i.fa.fa-cog.fa-2x
                                 if card.IsHighPriority
                                     i.fa.fa-exclamation.fa-2x
-                            h1= card.Heading
+                            h1
+                                if card.Id
+                                    span= card.Id
+                                    |  &mdash; 
+                                span= card.Heading
                             article.box.description
                                 dt Description
                                 dd!= card.description
